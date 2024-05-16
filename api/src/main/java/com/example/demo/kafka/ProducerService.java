@@ -9,15 +9,13 @@ import org.springframework.stereotype.Service;
 public class ProducerService {
 
     private final KafkaProducer<String, String> producer;
-    private final String topic;
 
-    public ProducerService(KafkaProducer<String, String> producer, String topic) {
+    public ProducerService(KafkaProducer<String, String> producer) {
         this.producer = producer;
-        this.topic = topic;
     }
 
     public void sendMessage(String message) {
-        ProducerRecord<String, String> record = new ProducerRecord<>(topic, message);
+        ProducerRecord<String, String> record = new ProducerRecord<>("test", message);
         producer.send(record);
     }
 

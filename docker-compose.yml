@@ -51,3 +51,6 @@ services:
     depends_on:
       - kafka
       - schema-registry
+
+
+
