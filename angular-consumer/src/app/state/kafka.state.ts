@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
 import { State, Action, StateContext } from '@ngxs/store';
-import { KafkaAction } from './kafka.actions';
+import { AddMessageAction } from './kafka.actions';
 import { Selector } from '@ngxs/store';
 
 export class KafkaStateModel {
-  public items: string[];
+  public items: any[] = [];
 }
 
 const defaults = {
@@ -23,9 +23,9 @@ export class KafkaState {
     return state.items;
   }
 
-  @Action(KafkaAction)
-  add({ getState, setState }: StateContext<KafkaStateModel>, { payload }: AddMessageAction) {
+  @Action(AddMessageAction)
+  add({ getState, setState }: StateContext<KafkaStateModel>, action: AddMessageAction) {
     const state = getState();
-    setState({ items: [ ...state.items, payload ] });
+    setState({ items: [ ...state.items, action.message ] });
   }
 }

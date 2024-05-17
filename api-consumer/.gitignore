@@ -1,0 +1,86 @@
+HELP.md
+.gradle
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+bin/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+### VS Code ###
+.vscode/
+
+
+# Node build artifacts
+/dist
+/node_modules
+
+# Logs
+/logs
+
+# Runtime data
+*.pid
+*.lock
+*.log
+
+# Dependency directories
+jspm_packages/
+typings/
+
+# Build output
+bower_components/
+coverage/
+.tmp/
+*.tmp/
+*.tmp/
+*.scss.*
+*.sass.*
+*.css.*
+*.less.*
+*.styl.*
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+*.ico
+*.svg
+*.woff
+*.woff2
+*.eot
+*.ttf
+*.hbs
+*.tpl
+*.html
+*.js.map
+*.css.map
+
+# Miscellaneous
+.DS_Store
+Thumbs.db
